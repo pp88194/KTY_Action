@@ -25,7 +25,7 @@ public class Attack : Istate
 
     IEnumerator A()
     {
-        Debug.Log("a");
+        
         ani.SetBool("isattack", true);
         //Run.Instance.speed = 0;
         yield return new WaitForSeconds(0.5f);

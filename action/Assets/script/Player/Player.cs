@@ -40,10 +40,9 @@ public class Player : MonoBehaviour
         dir = new Vector3(h, z, 0);
         dir.Normalize();
 
-        Debug.DrawRay(this.transform.position + new Vector3(h, z) * 1.5f, Vector3.zero, Color.blue);
-        hit = Physics2D.Raycast(this.transform.position + new Vector3(h, z) * 1.5f, Vector3.zero, 1, LayerMask.GetMask("map"));  //2d면 이렇게 쓰고 3d에서만 Physics2D hit넣어서 함 왜냐하면 반환형 때문
+        Debug.DrawRay(this.transform.position + new Vector3(h, z) * 1.5f, Vector3.forward, Color.blue);
+        hit = Physics2D.Raycast(this.transform.position + new Vector3(h, z) * 0.2f, Vector3.forward, 1, LayerMask.GetMask("map"));  //2d면 이렇게 쓰고 3d에서만 Physics2D hit넣어서 함 왜냐하면 반환형 때문
     }
-
 
     public void SetState(Istate nextState)
     {

@@ -8,7 +8,7 @@ public class Idle : Istate
 
     void Istate.OnEnter(Player Player)
     {
-        Debug.Log("Idle Enter");
+        
         this.player = Player;
     }
 

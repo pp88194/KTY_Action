@@ -30,12 +30,13 @@ public class RUn : ISTATe
         {
             Vector3 dir = monster.Target.position - monster.transform.position;
             monster.transform.Translate(dir.normalized * speed * Time.deltaTime);
+            if (Vector3.Distance(monster.Target.position, monster.transform.position) < 1.5f)
+            {
+                monster.SetState(new ATtack());
+            }
         }
 
-        if (Vector3.Distance(monster.Target.position, monster.transform.position) < 3)
-        {
-            monster.SetState(new ATtack());
-        }
+        
     }
     
 

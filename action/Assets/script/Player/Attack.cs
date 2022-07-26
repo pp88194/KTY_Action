@@ -25,11 +25,11 @@ public class Attack : Istate
 
     IEnumerator A()
     {
-        
-        ani.SetBool("isattack", true);
-        //Run.Instance.speed = 0;
-        yield return new WaitForSeconds(0.5f);
-        ani.SetBool("isattack", false);
-        player.SetState(new Idle());
+            ani.SetBool("isattack", true);
+            //Run.Instance.speed = 0;
+            yield return new WaitForSeconds(0.5f);
+            ani.SetBool("isattack", false);
+            player.SetState(new Idle());
+            Debug.Log("attack1");
     }
 }

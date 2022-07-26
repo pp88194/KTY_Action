@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Idle : Istate
+public class Idle :  Istate
 {
     private Player player;
-
+    int cnt = 0;
     void Istate.OnEnter(Player Player)
     {
         
@@ -23,6 +23,8 @@ public class Idle : Istate
         {
             player.SetState(new Attack());
         }
+       
+
         //Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         //if (dir != Vector3.zero)
         //    Player.SetState(new run());
